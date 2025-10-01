@@ -1,0 +1,24 @@
+---
+title: RAG‑based Trust Scoring for Rentals
+excerpt: Using embeddings + vector search to produce explainable trust scores across tenants/landlords.
+---
+
+### Problem
+We need explainable trust scores from heterogeneous signals: payments, messages, documents.
+
+### High‑Level Design
+- Ingest events → normalize to Postgres
+- Embed entities (docs/notes/events) → **pgvector**
+- Retrieve (R) relevant context → LLM generate (G) score + rationale
+- Persist score, factors, and **audit trail**
+
+### Key Components
+- API Gateway (NestJS)
+- Scoring Worker (Node/Golang)
+- Vector DB (pgvector/Pinecone)
+- LLM Providers (OpenAI/Gemini)
+- Queue (Redis/BullMQ)
+
+### Trade‑offs
+- Cost vs latency; caching retrieved chunks; nightly refresh
+- Guardrails & Pydantic/Zod validation on outputs

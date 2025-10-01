@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+.dark{ --background: #0b1220; --foreground: #e6eef8 }
+
+html,body,#root{ height:100%; }
+
+.container{ max-width: 1100px }
+
+/* include prose defaults */
+@import '../styles/prose.css';
