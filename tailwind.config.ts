@@ -1,25 +1,18 @@
 import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
-  darkMode: ['class'],
-  content: {
-    files: [
-      './app/**/*.{ts,tsx,mdx,css}',
-      './components/**/*.{ts,tsx,mdx,css}',
-      './styles/**/*.{css,mdx}',
-      './content/**/*.{md,mdx}',
-    ],
-    // Keep utilities referenced only via @apply
-    safelist: [
-      'text-2xl',
-      'text-xl',
-    ],
-  },
+  darkMode: 'class',
+  content: [
+    './app/**/*.{ts,tsx,mdx,css}',
+    './components/**/*.{ts,tsx,mdx,css}',
+    './styles/**/*.{css,mdx}',
+    './content/**/*.{md,mdx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         brand: {

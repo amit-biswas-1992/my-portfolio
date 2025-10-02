@@ -8,7 +8,6 @@ const withMDXConfig = withMDX({
 })
 
 const nextConfig = withMDXConfig({
-  experimental: { appDir: true },
   typescript: { ignoreBuildErrors: false },
 })
 
