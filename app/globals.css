@@ -13,5 +13,11 @@ html,body,#root{ height:100%; }
 
 .container{ max-width: 1100px }
 
-/* include prose defaults */
-@import '../styles/prose.css';
+/* include prose defaults (inlined to avoid postcss import ordering issues) */
+@layer components {
+  .prose { max-width: none; }
+}
+
+/* Small MDX tweaks (replaced @apply with plain CSS to avoid build-time @apply issues) */
+.prose h1{ font-size: 1.5rem; font-weight: 600; }
+.prose h2{ font-size: 1.25rem; font-weight: 600; }

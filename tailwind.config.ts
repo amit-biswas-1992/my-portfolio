@@ -3,7 +3,19 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
   darkMode: ['class'],
-  content: ['./app/**/*.{ts,tsx,mdx}','./components/**/*.{ts,tsx}'],
+  content: {
+    files: [
+      './app/**/*.{ts,tsx,mdx,css}',
+      './components/**/*.{ts,tsx,mdx,css}',
+      './styles/**/*.{css,mdx}',
+      './content/**/*.{md,mdx}',
+    ],
+    // Keep utilities referenced only via @apply
+    safelist: [
+      'text-2xl',
+      'text-xl',
+    ],
+  },
   theme: {
     extend: {
       fontFamily: {

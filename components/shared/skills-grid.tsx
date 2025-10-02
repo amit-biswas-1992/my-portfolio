@@ -1,10 +1,10 @@
 import { Badge } from '@/components/ui/badge'
-const SKILLS: Record<string,string[]> = {
-  Backend: ['Node.js','NestJS','Express','Golang','Python'],
-  Databases: ['PostgreSQL','MySQL','MongoDB','Redis','Supabase','NeonDB','pgvector'],
-  Frontend: ['Next.js (App & Pages)','React','Tailwind','shadcn/ui'],
-  Cloud_DevOps: ['AWS','DigitalOcean','Vercel','Docker','GitHub Actions','Nginx'],
-  AI_ML: ['OpenAI','Gemini','LangChainJS','Pinecone','RAG'],
+const SKILLS: Record<string, string[]> = {
+  Backend: ['Node.js', 'NestJS', 'Express', 'Golang', 'Python'],
+  Databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Supabase', 'NeonDB', 'pgvector'],
+  Frontend: ['Next.js (App & Pages)', 'React', 'Tailwind', 'shadcn/ui'],
+  Cloud_DevOps: ['AWS', 'DigitalOcean', 'Vercel', 'Docker', 'GitHub Actions', 'Nginx'],
+  AI_ML: ['OpenAI', 'Gemini', 'LangChainJS', 'Pinecone', 'RAG'],
 }
 export function SkillsGrid(){
   return (
