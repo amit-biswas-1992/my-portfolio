@@ -1,9 +1,10 @@
-import { withMDX } from '@next/mdx'
+import withMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
 
+// Use default import from @next/mdx — some versions export the plugin as default
 const withMDXConfig = withMDX({
-  extension: /.mdx?$/,
-  options: { remarkPlugins: [remarkGfm] }
+  extension: /\.(md|mdx)$/,
+  options: { remarkPlugins: [remarkGfm] },
 })
 
 const nextConfig = withMDXConfig({
