@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../components/**/*.{ts,tsx}";
+@source "../app/**/*.{ts,tsx}";
+@source "../content/**/*.{md,mdx}";
+
+@theme {
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand: #0EA5E9;
+  --color-brand-dark: #0284C7;
+}
 
 :root{
   --background: #ffffff;
